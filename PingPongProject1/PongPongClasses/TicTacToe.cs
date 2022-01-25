@@ -8,6 +8,9 @@ namespace PongPongClasses
 {
     public class TicTacToe
     {
+        public void Play(char letter, int number)
+        {
 
+        }
     }
 }
