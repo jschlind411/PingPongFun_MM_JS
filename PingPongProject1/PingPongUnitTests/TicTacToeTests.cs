@@ -6,22 +6,34 @@ namespace PingPongUnitTests
 {
     public class TicTacToeTests
     {
-        [Fact]
-        public void CanCreateTicTacToeClass()
-        {
-            var TicTacToe = new TicTacToe();
+        private TicTacToe Game;
 
-            Assert.NotNull(TicTacToe);
+        public TicTacToeTests()
+        {
+            Game = new TicTacToe();
         }
 
         [Fact]
-        public void TicTacToe_CanPlayMove_GivenCharacterAndLocation()
+        public void CanCreateTicTacToeClass()
         {
-            var TicTacToe = new TicTacToe();
+            Assert.NotNull(Game);
+        }
 
-            bool success = TicTacToe.Play('x', 1);
+        [Fact]
+        public void Play_GivenCharacterAndLocation_WillReturnTrue()
+        {
+            var success = Game.Play('x', 1);
 
+            Assert.True(success);
+        }
 
+        [Fact]
+        public void Play_GivenATakenLocation_WillReturnFalse()
+        {
+            Game.Play('x', 1);
+            var result = Game.Play('x', 1);
+
+            Assert.False(result);
         }
     }
 }
