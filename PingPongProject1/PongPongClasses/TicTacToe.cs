@@ -8,8 +8,14 @@ namespace PongPongClasses
 {
     public class TicTacToe
     {
+        bool playedBefore;
+        
         public bool Play(char letter, int number)
         {
+            if(playedBefore == true)
+            {
+                return false;
+            }
             return true;
         }
     }
