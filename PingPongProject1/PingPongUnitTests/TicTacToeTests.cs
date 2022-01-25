@@ -19,7 +19,9 @@ namespace PingPongUnitTests
         {
             var TicTacToe = new TicTacToe();
 
-            TicTacToe.Play('x', 1);
+            var success = TicTacToe.Play('x', 1);
+
+
         }
     }
 }
