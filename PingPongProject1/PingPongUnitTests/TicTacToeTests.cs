@@ -19,7 +19,7 @@ namespace PingPongUnitTests
         {
             var TicTacToe = new TicTacToe();
 
-            var success = TicTacToe.Play('x', 1);
+            bool success = TicTacToe.Play('x', 1);
 
 
         }
