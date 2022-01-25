@@ -8,7 +8,7 @@ namespace PongPongClasses
 {
     public class TicTacToe
     {
-        bool playedBefore;
+        bool playedBefore = false;
         
         public bool Play(char letter, int number)
         {
@@ -16,6 +16,8 @@ namespace PongPongClasses
             {
                 return false;
             }
+            
+            playedBefore = true;
             return true;
         }
     }
